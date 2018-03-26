@@ -16,7 +16,7 @@ def login(request):
         username = json_data["username"]
         password = json_data["password"]
         try:
-            user = auth.authenticate(username=username,password=password)
+            user = User.objects.get(username=username,password=password)
             if user is not None and user.is_active:
                 res_data={}
                 res_data['email']=user.email
