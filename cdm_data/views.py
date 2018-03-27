@@ -6,7 +6,8 @@ from django.contrib.auth.models import User
 from cdm_data.models import *
 from django.contrib import auth
 from django import forms
-from django.contrib.auth.decorators import login_required  
+from django.contrib.auth.decorators import login_required 
+from django.http import HttpResponse 
 import json
 
 @csrf_exempt

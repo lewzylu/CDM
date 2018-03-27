@@ -1,0 +1,537 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Mar 26 21:17:29 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+Python main interpreter initialized at 0x8251f0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 250128 bytes (244 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x8251f0 pid: 27826 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27826)
+spawned uWSGI worker 1 (pid: 27831, cores: 2)
+spawned uWSGI worker 2 (pid: 27832, cores: 2)
+invalid request block size: 21327 (max 4096)...skip
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Mar 26 21:20:15 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Mar 26 21:20:34 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Mon Mar 26 21:21:05 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 10:42:35 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 10:45:15 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 10:45:16 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 10:48:57 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+Python main interpreter initialized at 0xe061e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 250128 bytes (244 KB) for 4 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xe061e0 pid: 20200 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20200)
+spawned uWSGI worker 1 (pid: 20205, cores: 2)
+spawned uWSGI worker 2 (pid: 20206, cores: 2)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:02:28 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:03:53 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:34379 (port auto-assigned) fd 3
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+Python main interpreter initialized at 0x2139f30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 688464 bytes (672 KB) for 25 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2139f30 pid: 24302 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24302)
+spawned uWSGI worker 1 (pid: 24307, cores: 5)
+spawned uWSGI worker 2 (pid: 24308, cores: 5)
+spawned uWSGI worker 3 (pid: 24313, cores: 5)
+spawned uWSGI worker 4 (pid: 24318, cores: 5)
+spawned uWSGI worker 5 (pid: 24323, cores: 5)
+spawned uWSGI http 1 (pid: 24324)
+[pid: 24318|app: 0|req: 1/1] 127.0.0.1 () {34 vars in 405 bytes} [Tue Mar 27 03:03:55 2018] POST /login => generated 54 bytes in 15 msecs (HTTP/1.1 500) 4 headers in 133 bytes (1 switches on core 0)
+Tue Mar 27 03:04:28 2018 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Mar 27 03:04:28 2018 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:07:07 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30594
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1da4140
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1da4140 pid: 25216 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 25216, cores: 1)
+spawned uWSGI worker 2 (pid: 25221, cores: 1)
+spawned uWSGI worker 3 (pid: 25222, cores: 1)
+spawned uWSGI worker 4 (pid: 25223, cores: 1)
+spawned uWSGI worker 5 (pid: 25224, cores: 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:07:08 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30594
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:07:09 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30594
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:07:30 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30594
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:07:40 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30594
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8080 fd 4
+spawned uWSGI http 1 (pid: 25301)
+uwsgi socket 0 bound to TCP address 127.0.0.1:59708 (port auto-assigned) fd 3
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x17bb240
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x17bb240 pid: 25300 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 25300, cores: 1)
+spawned uWSGI worker 2 (pid: 25306, cores: 1)
+spawned uWSGI worker 3 (pid: 25307, cores: 1)
+spawned uWSGI worker 4 (pid: 25308, cores: 1)
+spawned uWSGI worker 5 (pid: 25309, cores: 1)
+[pid: 25307|app: 0|req: 1/1] 127.0.0.1 () {34 vars in 405 bytes} [Tue Mar 27 03:07:45 2018] POST /login => generated 54 bytes in 15 msecs (HTTP/1.1 500) 4 headers in 133 bytes (1 switches on core 0)
+[pid: 25306|app: 0|req: 1/2] 127.0.0.1 () {34 vars in 405 bytes} [Tue Mar 27 03:08:08 2018] POST /login => generated 54 bytes in 16 msecs (HTTP/1.1 500) 4 headers in 133 bytes (1 switches on core 0)
+[pid: 25306|app: 0|req: 2/3] 127.0.0.1 () {34 vars in 405 bytes} [Tue Mar 27 03:09:03 2018] POST /login => generated 54 bytes in 5 msecs (HTTP/1.1 500) 4 headers in 133 bytes (2 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:09:34 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30594
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8080).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 25307|app: 0|req: 2/4] 127.0.0.1 () {34 vars in 405 bytes} [Tue Mar 27 03:09:38 2018] POST /login => generated 54 bytes in 5 msecs (HTTP/1.1 500) 4 headers in 133 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 11:09:55 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30594
+your memory page size is 4096 bytes
+ *** WARNING: you have enabled harakiri without post buffering. Slow upload could be rejected on post-unbuffered webservers *** 
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8080 fd 4
+spawned uWSGI http 1 (pid: 25827)
+uwsgi socket 0 bound to TCP address 127.0.0.1:24876 (port auto-assigned) fd 3
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xc94260
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xc94260 pid: 25826 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 25826, cores: 1)
+spawned uWSGI worker 2 (pid: 25832, cores: 1)
+spawned uWSGI worker 3 (pid: 25833, cores: 1)
+spawned uWSGI worker 4 (pid: 25834, cores: 1)
+spawned uWSGI worker 5 (pid: 25835, cores: 1)
+[pid: 25826|app: 0|req: 1/1] 127.0.0.1 () {34 vars in 405 bytes} [Tue Mar 27 03:09:57 2018] POST /login => generated 54 bytes in 15 msecs (HTTP/1.1 500) 4 headers in 133 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 15:23:33 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+setgid() to 2000
+setuid() to 1000
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:46817 (port auto-assigned) fd 3
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+Python main interpreter initialized at 0x1b7bf30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 688464 bytes (672 KB) for 25 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1b7bf30 pid: 19286 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19286)
+spawned uWSGI worker 1 (pid: 19291, cores: 5)
+spawned uWSGI worker 2 (pid: 19292, cores: 5)
+spawned uWSGI worker 3 (pid: 19297, cores: 5)
+spawned uWSGI worker 4 (pid: 19302, cores: 5)
+spawned uWSGI worker 5 (pid: 19303, cores: 5)
+spawned uWSGI http 1 (pid: 19305)
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Mar 27 15:32:49 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 26 March 2018 09:03:14
+os: Linux-3.10.104-1-tlinux2_kvm_guest-0022.tl2 #1 SMP Wed Dec 14 10:21:52 CST 2016
+nodename: VM_8_118_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /data/lewzylu/CDM
+detected binary path: /usr/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/lewzylu/CDM
+your processes number limit is 30594
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1776a00
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1776a00 pid: 22088 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22088)
+spawned uWSGI worker 1 (pid: 22093, cores: 1)
+[pid: 22093|app: 0|req: 1/1] 127.0.0.1 () {36 vars in 443 bytes} [Tue Mar 27 07:32:56 2018] POST /login => generated 67 bytes in 25 msecs (HTTP/1.1 200) 6 headers in 399 bytes (1 switches on core 0)
+[pid: 22093|app: 0|req: 2/2] 127.0.0.1 () {36 vars in 443 bytes} [Tue Mar 27 07:47:43 2018] POST /login => generated 67 bytes in 20 msecs (HTTP/1.1 200) 6 headers in 399 bytes (1 switches on core 0)
+[pid: 22093|app: 0|req: 3/3] 127.0.0.1 () {38 vars in 576 bytes} [Tue Mar 27 07:47:43 2018] POST /logout => generated 40 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 183 bytes (1 switches on core 0)
