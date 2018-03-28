@@ -1,0 +1,16 @@
+VueDaemonsendflow=0
+VueDaemonreceiveflow=0
+VueCentersendflow=0
+VueCenterreceiveflow=0
+VueAgentsendflow=0
+VueAgentreceiveflow=0
+VueCachesendflow=0
+VueCachereceiveflow=0
+VueSERVERsendflow=0
+VueSERVERreceiveflow=0
+VUEConnectorsendflow=0
+VUEConnectorreceiveflow=0
+Myswitchsendflow=0
+Myswitchreceiveflow=0
+Slirpvdesendflow=0
+Slirpvdereceiveflow=0
