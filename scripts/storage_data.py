@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import time
-
+from django.contrib.auth.models import User
 def get_space_data(path):
 	total_space = os.popen("df "+path+" | grep "+path+" | awk '{print $2}'").read().split('\n')[0]
 	used_space = os.popen("df "+path+" | grep "+path+" | awk '{print $3}'").read().split('\n')[0]
@@ -22,5 +22,6 @@ if __name__ == "__main__":
 		if t % 60 == 0:
 			used_space, total_space =  get_space_data('/dev')
 			cpu, net, mem = get_cpu_net_mem()
+			
 			print cpu,net,mem	
 #print get_netwidth()
