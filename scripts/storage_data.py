@@ -7,7 +7,7 @@ import django
 sys.path.append("/data/lewzylu/CDM")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "CDM.settings")# project_name 项目名称
 django.setup()
-
+from cdm_data.models import *
 from django.contrib.auth.models import User
 
 def get_space_data(path):
@@ -28,7 +28,13 @@ while(True):
 	time.sleep(0.5)
 	if t % 60 == 0:
 		used_space, total_space =  get_space_data('/dev')			
-		cpu, net, mem = get_cpu_net_mem()	
+		st = Storagedata.objects.all()[0]
+		st.used_space = used_space
+		st.total_space = total_space
+		st.eq_status = '1'
+		disk_status = 'RAID 5'
+		disk_type = '1'
+		cpu, net, mem = get_cpu_net_mem()
 		print cpu,net,mem	
 #print get_netwidth()
 
