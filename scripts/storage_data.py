@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 import os
 import time
-from django.contrib.auth.models import User
+import sqlite3
+
+
+
 def get_space_data(path):
 	total_space = os.popen("df "+path+" | grep "+path+" | awk '{print $2}'").read().split('\n')[0]
 	used_space = os.popen("df "+path+" | grep "+path+" | awk '{print $3}'").read().split('\n')[0]
@@ -15,12 +18,20 @@ def get_cpu_net_mem():
 	mem = rt[2]
 	return cpu,net,mem
 
+print c.fetchall()
+c.execute("select username,password,email from auth_user")
+print c.fetchall()
+
 if __name__ == "__main__":
+	conn = sqlite3.connect('/data/lewzylu/CDM/db.sqlite3')
+	c = conn.cursor()
 	while(True):	
 		t = int(time.time())
 		time.sleep(0.5)
 		if t % 60 == 0:
 			used_space, total_space =  get_space_data('/dev')
+			
+			
 			cpu, net, mem = get_cpu_net_mem()
 			
 			print cpu,net,mem	

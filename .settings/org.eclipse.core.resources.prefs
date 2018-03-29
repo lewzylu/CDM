@@ -6,3 +6,5 @@ encoding//cdm_data/response.py=utf-8
 encoding//cdm_data/tests.py=utf-8
 encoding//cdm_data/urls.py=utf-8
 encoding//cdm_data/views.py=utf-8
+encoding//scripts/initialize.py=utf-8
+encoding//scripts/storage_data.py=utf-8

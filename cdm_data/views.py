@@ -8,7 +8,9 @@ from django.contrib import auth
 from django import forms
 from django.contrib.auth.decorators import login_required 
 from django.http import HttpResponse 
+import logging
 import json
+logger = logging.getLogger('django')
 
 @csrf_exempt
 def login(request):
@@ -16,17 +18,21 @@ def login(request):
         json_data = json.loads(request.body)
         username = json_data["username"]
         password = json_data["password"]
+        logger.info("login request, username: " + username)
         try:
             user = User.objects.get(username=username,password=password)
             if user is not None and user.is_active:
                 res_data={}
                 res_data['email']=user.email
                 auth.login(request, user)
+                logger.info("login success, username: " + username)
                 return CDMResponse(code=200,msg="",data=res_data)._httpresponse
             else:
+                logger.warn("login failure, The username and passwords do not match")
                 return CDMResponse(code=403,msg="The username and passwords do not match")._httpresponse
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            logger.error("Internal Server Error")
+            return CDMResponse(code=500,msg=u"Internal Server Error")._httpresponse
         
     return HttpResponse("",content_type="application/json",status=404)
 
@@ -35,24 +41,25 @@ def login(request):
 def logout(request):
     if request.method =='POST':
         auth.logout(request)
+        logger.info("logout success")
         return CDMResponse(code=200,msg="")._httpresponse
     return HttpResponse("",content_type="application/json",status=404)
 
 @login_required
 @csrf_exempt
-def stroagedata(request):
+def storagedata(request):
     if request.method =='GET':
         try:
             res_data = {}
-            stroagedata = Stroagedata.objects.all()[0]
-            res_data['totalspace'] = stroagedata.totalspace
-            res_data['usedspace'] = stroagedata.usedspace
-            res_data['eq_status'] = stroagedata.eq_status
-            res_data['disk_status'] = stroagedata.disk_status
-            res_data['disk_type'] = stroagedata.disk_type
-            res_data['cpu_use'] = stroagedata.status
-            res_data['tape_use'] = stroagedata.status
-            res_data['mem_use'] = stroagedata.status
+            storagedata = storagedata.objects.all()[0]
+            res_data['totalspace'] = storagedata.totalspace
+            res_data['usedspace'] = storagedata.usedspace
+            res_data['eq_status'] = storagedata.eq_status
+            res_data['disk_status'] = storagedata.disk_status
+            res_data['disk_type'] = storagedata.disk_type
+            res_data['cpu_use'] = storagedata.status
+            res_data['tape_use'] = storagedata.status
+            res_data['mem_use'] = storagedata.status
             return CDMResponse(code=200,msg="",data=res_data)._httpresponse
         except Exception:
             return CDMResponse(code=500,msg=u"Internal error")._httpresponse
@@ -110,7 +117,7 @@ def log(request):
 
 @login_required
 @csrf_exempt
-def Active(request):
+def active(request):
     if request.method =='POST':
         json_data = json.loads(request.body)
         password = json_data["password"]

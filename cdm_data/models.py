@@ -1,7 +1,7 @@
 #coding:utf-8
 from django.db import models
 
-class Storage_data(models.Model):
+class Storagedata(models.Model):
     """存储数据z
     """
     used_space = models.CharField(max_length=30)
