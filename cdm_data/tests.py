@@ -11,6 +11,10 @@ headers = {"csrf_token":"123213"}
 rt =s.post("http://127.0.0.1:8099/login",data=data)
  
 print rt.text
+
+rt = s.get("http://127.0.0.1:8099/storagedata")
+print rt.text
+
 rt =s.post("http://127.0.0.1:8099/logout")
 # Create your tests here.
 print rt.text

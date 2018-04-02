@@ -32,9 +32,8 @@ RX=$(( $RX2-$RX1 ))
 TX=$(( $TX2-$TX1 ))
 RXBAND=$(($RX*8/$Time))
 TXBAND=$(($TX*8/$Time)) 
-SX=$(( $RX+$TX ))
-SXBAND=`echo $SX*8/$Time | bc -l`
-printf  "%.0f\n" ${SXBAND}
+printf  "%.0f\n" ${TXBAND}
+printf  "%.0f\n" ${RXBAND}
 
 #MEM
 LoadMemory=$(cat /proc/meminfo | awk '{print $2}')

@@ -9,7 +9,20 @@ class Storagedata(models.Model):
     eq_status = models.CharField(max_length=30)
     disk_status = models.CharField(max_length=30)
     disk_type = models.CharField(max_length=30)
- 
+
+class Graphdata(models.Model):
+	"""图表数据
+	"""
+	id = models.IntegerField(primary_key=True)
+	cpu_use = models.CharField(max_length=30)
+	upstream = models.CharField(max_length=30)
+	downstream = models.CharField(max_length=30)
+	mem_use = models.CharField(max_length=30) 
+	
+	def __unicode__(self):
+		return str(self.id)
+
+
 class Network(models.Model):
     """网络设置
     """
@@ -36,8 +49,7 @@ class Log(models.Model):
     handlers = models.CharField(max_length=30)
     status = models.CharField(max_length=30)
     mis_type = models.CharField(max_length=30)
-    mis_data = models.CharField(max_length=300)
-#     
+    mis_data = models.CharField(max_length=300)     
 
 class Transfer(models.Model):
     """迁移映射
