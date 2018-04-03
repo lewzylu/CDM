@@ -49,20 +49,20 @@ def logout(request):
 @csrf_exempt
 def storagedata(request):
     if request.method =='GET':
-# 		try:
 		res_data = {}
-		storagedata = Storagedata.objects.all()[0]
-		res_data['totalspace'] = storagedata.total_space
-		res_data['usedspace'] = storagedata.used_space
-		res_data['eq_status'] = storagedata.eq_status
-		res_data['disk_status'] = storagedata.disk_status
-		res_data['disk_type'] = storagedata.disk_type
-		res_data['cpu_use'] ={"sum": list(Graphdata.objects.values_list('cpu_use',flat=True))   }
-		res_data['tape_use'] ={"upstream": list(Graphdata.objects.values_list('upstream',flat=True)),"downstream": list(Graphdata.objects.values_list('downstream',flat=True))}
-		res_data['mem_use'] = {"sum": list(Graphdata.objects.values_list('mem_use',flat=True)),}
-		return CDMResponse(code=200,msg="",data=res_data)._httpresponse
-# 		except Exception:
-# 			return CDMResponse(code=500,msg=u"Internal error")._httpresponse    return HttpResponse("",content_type="application/json",status=404)
+    try:
+        storagedata = Storagedata.objects.all()[0]
+        res_data['total_space'] = storagedata.total_space
+        res_data['used_space'] = storagedata.used_space
+        res_data['eq_status'] = storagedata.eq_status
+        res_data['disk_status'] = storagedata.disk_status
+        res_data['disk_type'] = storagedata.disk_type
+        res_data['cpu_use'] ={"sum": list(Graphdata.objects.values_list('cpu_use',flat=True))   }
+        res_data['tape_use'] ={"upstream": list(Graphdata.objects.values_list('upstream',flat=True)),"downstream": list(Graphdata.objects.values_list('downstream',flat=True))}
+        res_data['mem_use'] = {"sum": list(Graphdata.objects.values_list('mem_use',flat=True)),}
+        return CDMResponse(code=200,msg="",data=res_data)._httpresponse
+    except Exception:
+		return CDMResponse(code=500,msg=u"Internal error")._httpresponse    return HttpResponse("",content_type="application/json",status=404)
 
 @login_required
 @csrf_exempt

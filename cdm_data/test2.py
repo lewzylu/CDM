@@ -10,7 +10,6 @@ print json.loads(data)
 rt =s.post("http://127.0.0.1:8000/login",data=data)
 # Create your tests here.
 print rt.text
- 
 rt =s.get("http://127.0.0.1:8000/storagedata")
 # Create your tests here.
 print rt.text
