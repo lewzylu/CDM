@@ -28,7 +28,7 @@ def get_cpu_net_mem():
 while(True):	
 	t = int(time.time())
 	time.sleep(0.5)
-	if t % 1  == 0:
+	if t % 60  == 0:
 		try:
 			t = t/60 % 1440
 			used_space, total_space =  get_space_data('/dev')			

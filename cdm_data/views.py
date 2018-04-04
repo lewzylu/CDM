@@ -156,7 +156,6 @@ def transfer(request):
             transfers = Transfer.objects.all()
             for transfer in transfers:
                 res_data['bucket'] = transfer.bucket
-                res_date['bucket_name'] = transfer.bucket_name
                 res_data['target_region'] = transfer.target_region
                 res_data['target_path'] = transfer.target_path
                 return CDMResponse(code=200,msg="",data=res_data)._httpresponse
@@ -167,11 +166,13 @@ def transfer(request):
             json_data = json.loads(request.body)
             transfer = Transfer.objects.get(bucket=json_data["bucket"])
             if transfer:
-                transfer.bucket = json_data['bucket']
-                transfer.subnet_mask = json_data['subnet_mask']
-                transfer.gateway = json_data['gateway']
+                transfer.bucket = json_data['target_bucket']
+                transfer.target_region = json_data['target_region']
+                transfer.target_path = json_data['target_path']
                 network.save()
                 return CDMResponse(code=200,msg="",data="")._httpresponse
+            else:
+               tansfet.create(bucket=json_data['bucket'], target_region=json_data['target_bucket'], target_path=json_data['target_path'])
         except Exception:
             return CDMResponse(code=500,msg=u"Internal error")._httpresponse
     elif request.method =='DELETE':
