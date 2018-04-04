@@ -31,7 +31,7 @@ def login(request):
                 logger.warn("login failure, The username and passwords do not match")
                 return CDMResponse(code=403,msg="The username and passwords do not match")._httpresponse
         except Exception:
-            logger.error("Internal Server Error")
+            logger.warn("Internal Server Error")
             return CDMResponse(code=500,msg=u"Internal Server Error")._httpresponse
         
     return HttpResponse("",content_type="application/json",status=404)
@@ -60,14 +60,16 @@ def storagedata(request):
         res_data['cpu_use'] ={"sum": list(Graphdata.objects.values_list('cpu_use',flat=True))   }
         res_data['tape_use'] ={"upstream": list(Graphdata.objects.values_list('upstream',flat=True)),"downstream": list(Graphdata.objects.values_list('downstream',flat=True))}
         res_data['mem_use'] = {"sum": list(Graphdata.objects.values_list('mem_use',flat=True)),}
+        logger.info("get storage_data success")
         return CDMResponse(code=200,msg="",data=res_data)._httpresponse
     except Exception:
-		return CDMResponse(code=500,msg=u"Internal error")._httpresponse    return HttpResponse("",content_type="application/json",status=404)
+        logger.warn("get storage_data failed")
+        return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+    return HttpResponse("",content_type="application/json",status=404)
 
 @login_required
 @csrf_exempt
 def network(request):
-    if request.method =='GET':
         try:
             res_data = {}
             networks = Network.objects.all()
@@ -86,10 +88,25 @@ def network(request):
             json_data = json.loads(request.body)
             network = Networks.objects.get(interface=json_data["interface"])
             if network:
+                ipfile = "/etc/sysconfig/network-scripts/ifcfg-" + json_data["interface"]
+                try:
+                    lines=open(ipfile,'r').readlines()
+                    for i in range(len(lines)):
+                        if 'IPADDR' in lines[i]:
+                            lines[i] ="IPADDR='{ip}'\n".format(ip=json_data['ip'])
+                        if 'NETMASK' in lines[i]:
+                            lines[i] = "NETMASK={netmask}\n".format(netmask=json_data['subnet_mask'])
+                        if 'GATEWAY' in lines[i]:
+                            lines[i] = "GATEWAY={gateway}\n".format(netmask=json_data['gateway'])    
+                    open(ipfile,'w').writelines(lines)
+                     
+                except Exception,e:
+                    logger.warn(e)
+                    raise Exception("set networkdata failed")
                 network.ip = json_data['ip']
                 network.subnet_mask = json_data['subnet_mask']
                 network.gateway = json_data['gateway']
-                network.save()
+                network.save()                
                 return CDMResponse(code=200,msg="",data="")._httpresponse
         except Exception:
             return CDMResponse(code=500,msg=u"Internal error")._httpresponse
@@ -139,7 +156,7 @@ def transfer(request):
             transfers = Transfer.objects.all()
             for transfer in transfers:
                 res_data['bucket'] = transfer.bucket
-                res_date['target_bucket'] = transfer.target_bucket
+                res_date['bucket_name'] = transfer.bucket_name
                 res_data['target_region'] = transfer.target_region
                 res_data['target_path'] = transfer.target_path
                 return CDMResponse(code=200,msg="",data=res_data)._httpresponse

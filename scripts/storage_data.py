@@ -28,7 +28,7 @@ def get_cpu_net_mem():
 while(True):	
 	t = int(time.time())
 	time.sleep(0.5)
-	if t % 60  == 0:
+	if t % 1  == 0:
 		try:
 			t = t/60 % 1440
 			used_space, total_space =  get_space_data('/dev')			
@@ -51,7 +51,7 @@ while(True):
 			gd.downstream = downstream
 			gd.mem_use = mem
 			gd.save()
-			logger.info("cpu_use: {cpu_use}, upstream: {upstream}, downstream: {downstream}, mem_use: {mem_use}".format(cpu_use=cpu, upstream=upstream, downstream=downstream, mem_use=mem))
+            logger.info("cpu_use: {cpu_use}, upstream: {upstream}, downstream: {downstream}, mem_use: {mem_use}".format(cpu_use=cpu, upstream=upstream, downstream=downstream, mem_use=mem))
 		except:
 			logger.warn("get cpu_net_memory failed")
 #print get_netwidth()
