@@ -26,13 +26,13 @@ def login(request):
                 res_data['email']=user.email
                 auth.login(request, user)
                 logger.info("login success, username: " + username)
-                return CDMResponse(code=200,msg="",data=res_data)._httpresponse
+                return CDMResponse(code=0, msg="", data=res_data, status=200)._httpresponse
             else:
                 logger.warn("login failure, The username and passwords do not match")
-                return CDMResponse(code=403,msg="The username and passwords do not match")._httpresponse
+                return CDMResponse(code=-2, msg="The username and passwords do not match", status=403)._httpresponse
         except Exception:
             logger.warn("Internal Server Error")
-            return CDMResponse(code=500,msg=u"Internal Server Error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal Server Error")._httpresponse
         
     return HttpResponse("",content_type="application/json",status=404)
 
@@ -42,7 +42,7 @@ def logout(request):
     if request.method =='POST':
         auth.logout(request)
         logger.info("logout success")
-        return CDMResponse(code=200,msg="")._httpresponse
+        return CDMResponse(code=0,msg="")._httpresponse
     return HttpResponse("",content_type="application/json",status=404)
 
 @login_required
@@ -61,10 +61,10 @@ def storagedata(request):
         res_data['tape_use'] ={"upstream": list(Graphdata.objects.values_list('upstream',flat=True)),"downstream": list(Graphdata.objects.values_list('downstream',flat=True))}
         res_data['mem_use'] = {"sum": list(Graphdata.objects.values_list('mem_use',flat=True)),}
         logger.info("get storage_data success")
-        return CDMResponse(code=200,msg="",data=res_data)._httpresponse
+        return CDMResponse(code=0,msg="",data=res_data)._httpresponse
     except Exception:
         logger.warn("get storage_data failed")
-        return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+        return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     return HttpResponse("",content_type="application/json",status=404)
 
 @login_required
@@ -80,9 +80,9 @@ def network(request):
                 res_data['subnet_mask'] = network.subnet_mask
                 res_data['gateway'] = network.gateway
                 res_data['status'] = network.status
-                return CDMResponse(code=200,msg="",data=res_data)._httpresponse
+                return CDMResponse(code=0,msg="",data=res_data)._httpresponse
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     elif request.method =='POST':
         try:
             json_data = json.loads(request.body)
@@ -107,9 +107,9 @@ def network(request):
                 network.subnet_mask = json_data['subnet_mask']
                 network.gateway = json_data['gateway']
                 network.save()                
-                return CDMResponse(code=200,msg="",data="")._httpresponse
+                return CDMResponse(code=0,msg="",data="")._httpresponse
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     return HttpResponse("",content_type="application/json",status=404)
 
 @login_required
@@ -125,9 +125,9 @@ def log(request):
                 res_data['status'] = log.status
                 res_data['mis_type'] = log.mis_type
                 res_data['mis_data'] = log.mis_data
-                return CDMResponse(code=200,msg="",data=res_data)._httpresponse
+                return CDMResponse(code=0,msg="",data=res_data)._httpresponse
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     return HttpResponse("",content_type="application/json",status=404)
 
 @login_required
@@ -139,11 +139,11 @@ def active(request):
         try:
             active = Active.objects.get(password=password)
             if active:
-                return CDMResponse(code=200,msg="",data=res_data)._httpresponse
+                return CDMResponse(code=0,msg="",data=res_data)._httpresponse
             else:
-                return CDMResponse(code=403,msg="The password do not match")._httpresponse
+                return CDMResponse(code=-2,msg="The password do not match")._httpresponse
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     return HttpResponse("",content_type="application/json",status=404)
 
 
@@ -158,9 +158,9 @@ def transfer(request):
                 res_data['bucket'] = transfer.bucket
                 res_data['target_region'] = transfer.target_region
                 res_data['target_path'] = transfer.target_path
-                return CDMResponse(code=200,msg="",data=res_data)._httpresponse
+                return CDMResponse(code=0,msg="",data=res_data)._httpresponse
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     elif request.method =='POST':
         try:
             json_data = json.loads(request.body)
@@ -170,18 +170,18 @@ def transfer(request):
                 transfer.target_region = json_data['target_region']
                 transfer.target_path = json_data['target_path']
                 network.save()
-                return CDMResponse(code=200,msg="",data="")._httpresponse
+                return CDMResponse(code=0,msg="",data="")._httpresponse
             else:
                tansfet.create(bucket=json_data['bucket'], target_region=json_data['target_bucket'], target_path=json_data['target_path'])
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     elif request.method =='DELETE':
         try:
             json_data = json.loads(request.body)
             transfer = Transfer.objects.get(bucket=json_data["bucket"])
             if transfer:
                 transfer.delete()
-                return CDMResponse(code=204,msg="",data="")._httpresponse
+                return CDMResponse(code=0,msg="",data="")._httpresponse
         except Exception:
-            return CDMResponse(code=500,msg=u"Internal error")._httpresponse
+            return CDMResponse(code=-1,msg=u"Internal error")._httpresponse
     return HttpResponse("",content_type="application/json",status=404)
